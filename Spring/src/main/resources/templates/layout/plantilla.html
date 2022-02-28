@@ -7,11 +7,18 @@
     </head>
     <body>
         <header th:fragment="header">
-            <h1>Control de clientes</h1>
+            <h1 th:text="#{plantilla.titulo}">Titulo</h1>
         </header>
         
         <footer th:fragment="footer">
-            <h1>Derechos Reservados <a href="#" >CopyRight</a> </h1>
+            <div>
+                <br/>
+                <a th:href="@{/(lang=es)}">ES</a> |
+                <a th:href="@{/(lang=en)}">EN</a> |
+                <span> [[#{plantilla.pie-pagina}]] <a href="#" >CopyRight</a> </span>
+            </div>
+            
+            
         </footer>
     </body>
 </html>
