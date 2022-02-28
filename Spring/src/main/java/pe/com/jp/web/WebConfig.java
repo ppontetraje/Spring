@@ -30,6 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry){
         registry.addInterceptor(localeChangeInterceptor());
     }
+    
     @Override
     public void addViewControllers(ViewControllerRegistry registry){
         registry.addViewController("/").setViewName("index");
