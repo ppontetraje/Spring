@@ -18,8 +18,8 @@
                 <a th:href="@{/(lang=en)}">EN</a> |
                 <span> [[#{plantilla.pie-pagina}]] <a href="#" >CopyRight</a> </span>
                 <form method="POST" th:action="@{/logout}">
-                    <b>User</b> <span sec:authentication="name">user</span>
-                    <b>Roles</b> <span sec:authentication="principal.authorities">Roles</span>
+                    <b>User</b> <span sec:authentication="name">user</span>|
+                    <b>Roles</b> <span sec:authentication="principal.authorities">Roles</span>|
                     <a href="#" onclick="this.parentNode.submit();">[[#{accion.salir}]]</a>
                 </form>
             </div>
