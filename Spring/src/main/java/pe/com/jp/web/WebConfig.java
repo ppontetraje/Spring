@@ -1,6 +1,5 @@
 package pe.com.jp.web;
 
-import java.util.HashSet;
 import java.util.Locale;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

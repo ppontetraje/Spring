@@ -12,12 +12,13 @@ import lombok.Data;
 @Table(name="usuario")
 public class Usuario implements Serializable{
     
-     @Id
+    @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id_usuario;
     
     @NotEmpty
     private String username;
+    
     @NotEmpty
     private String password;
     

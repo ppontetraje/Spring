@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pe.com.jp.dao.UsuarioDao;
 import pe.com.jp.domain.Rol;
 import pe.com.jp.domain.Usuario;
@@ -22,8 +23,9 @@ public class UsuarioService implements UserDetailsService{
     private UsuarioDao usuarioDao;
     
     @Override
+    @Transactional(readOnly=true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario user = usuarioDao.findByUserName(username);
+        Usuario user = usuarioDao.findByUsername(username);
         
         if (user == null){
             throw new UsernameNotFoundException(username);

@@ -7,5 +7,5 @@ public interface PersonaService {
     public List<Persona> listaPersonas();
     public void guardar(Persona personas);
     public void eliminar (Persona persona);
-    public Persona encontrarpersona(Persona persona);
+    public Persona encontrarPersona(Persona persona);
 }

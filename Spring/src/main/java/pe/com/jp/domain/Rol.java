@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 @Table(name="role")
 public class Rol implements Serializable{
-    private static final long serialVErsionUID = 1L;
+    private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
